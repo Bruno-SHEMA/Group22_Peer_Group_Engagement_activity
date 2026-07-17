@@ -159,3 +159,6 @@ INSERT INTO Student_Courses (student_id, course_id) VALUES
 (2, 3),
 (3, 4),
 (5, 5);
+--Select
+select * from `Student_Courses`;
+
