@@ -1,7 +1,7 @@
-
+--Creating database
 CREATE DATABASE SCHOOL_DB;
     DEFAULT CHARACTER SET = 'utf8mb4';
-
+--member 2
 CREATE TABLE classroom (
     classroom_id INT PRIMARY KEY,
     room_number VARCHAR(10),
@@ -25,7 +25,7 @@ WHERE classroom_id = 5;
 
 SELECT * FROM classroom
 WHERE building="Main Building';
-
+--member 1
 
 CREATE TABLE Students (
     student_id INT PRIMARY KEY,
@@ -58,6 +58,7 @@ WHERE student_id = 999;
 
 SELECT * FROM Students
 WHERE classroom_id = 1;
+--member 3
 CREATE TABLE Faculty(
     Faculty_id INT,
     Name VARCHAR(100),
@@ -83,7 +84,7 @@ WHERE Faculty_id = 005;
 SELECT *
 From Faculty
 WHERE Faculty_id = 004;
-
+--member 4
 CREATE TABLE Courses (
     course_id     INT PRIMARY KEY,
     course_name   VARCHAR(100) NOT NULL,
@@ -166,3 +167,11 @@ select * from `Student_Courses`;
 UPDATE `Student_Courses` SET course_id=3 where student_id=5;
 --delete everything in Student_course
 delete from `Student_Courses`;
+--member 5/ student_activities
+CREATE Table Student_Activities(
+    student_activity_id INT primary key AUTO_INCREMENT,
+    student_id INT,
+    activity_id INT,
+    Foreign Key (student_id) REFERENCES Students(student_id),
+    Foreign Key (activity_id) REFERENCES Extra_Curricular_Activities(activity_id)
+);
