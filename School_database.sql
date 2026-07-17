@@ -56,3 +56,28 @@ WHERE student_id = 999;
 
 SELECT * FROM Students
 WHERE classroom_id = 1;
+CREATE TABLE Faculty(
+    Faculty_id INT,
+    Name VARCHAR(100),
+    Email VARCHAR(100),
+    Department VARCHAR(50)
+);
+
+SELECT * From Faculty;
+INSERT INTO Faculty(Faculty_id, Name, Email, Department)
+VALUES
+(001, 'Health sciences', 'sciencesH@gmail.com', 'Sciences Department'),
+(002, ' Engineering & Technology', 'engintech@gmail.com', 'Engineering Department'),
+(003, 'Faculty of Science', 'scifa@gmail.com', 'Science Department'),
+(004, 'Faculty of Education', 'educulty@gmail.com', 'Education Department'),
+(005, 'Faculty of Social Sciences', 'soscienc@gmail.com', 'Social Department');
+
+SELECT * From Faculty WHERE Department = 'Science Department';
+UPDATE Faculty SET Email = 'sceinces@gmail.com' WHERE Faculty_id = 3;
+
+DELETE From Faculty
+WHERE Faculty_id = 005;
+
+SELECT *
+From Faculty
+WHERE Faculty_id = 004;
