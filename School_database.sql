@@ -175,3 +175,10 @@ CREATE Table Student_Activities(
     Foreign Key (student_id) REFERENCES Students(student_id),
     Foreign Key (activity_id) REFERENCES Extra_Curricular_Activities(activity_id)
 );
+--insert
+INSERT INTO Student_Activities (student_id, activity_id) VALUES
+(1, 3),
+(2, 2),
+(3, 1),
+(4, 4),
+(5, 5);
