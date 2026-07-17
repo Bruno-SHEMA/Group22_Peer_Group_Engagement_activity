@@ -2,28 +2,28 @@
 CREATE DATABASE SCHOOL_DB;
     DEFAULT CHARACTER SET = 'utf8mb4';
 --member 2
-CREATE TABLE classroom (
+CREATE TABLE Classroom (
     classroom_id INT PRIMARY KEY,
     room_number VARCHAR(10),
     building VARCHAR(50),
     capacity INT
 );
-INSERT INTO classroom (classroom_id, room_number, building, capacity) VALUES
+INSERT INTO Classroom (classroom_id, room_number, building, capacity) VALUES
 (1, 'A101', 'Main Building', 30),
 (2, 'B203', 'Science Wing', 25),
 (3, 'C110', 'Arts Building', 40),
 (4, 'A205', 'Main Building', 20);
 
-INSERT INTO classroom (classroom_id, room_number,building,capacity)VALUES
+INSERT INTO Classroom (classroom_id, room_number,building,capacity)VALUES
 (5, 'D301', 'Engineering Hall', 35);
 UPDATE Classroom
 SET capacity = 32
 WHERE classroom_id = 1;
 
-DELETE FROM classroom
+DELETE FROM Classroom
 WHERE classroom_id = 5;
 
-SELECT * FROM classroom
+SELECT * FROM Classroom
 WHERE building="Main Building';
 --member 1
 
@@ -38,18 +38,18 @@ CREATE TABLE Students (
 
 INSERT INTO Students (student_id, name, email, classroom_id, enrollment_date)
 VALUES
-(6, 'Gatete Keza', 'gatet@alustudent.com', 1, '2024-09-01'),
-(7, 'Aline Uwase', 'alin@alustudent.com', 4, '2024-09-01'),
-(9, 'Eric Niyonzima', 'erric@alustudent.com', 5, '2024-09-02'),
-(12, 'Diane Mukamana', 'dian@alustudent.com', 6, '2024-09-02'),
-(8, 'Jean Baptiste', 'jeann@alustudent.com', 101, '2024-09-03');
+(1, 'Gatete Keza', 'gatet@alustudent.com', 1, '2024-09-01'),
+(2, 'Aline Uwase', 'alin@alustudent.com', 4, '2024-09-01'),
+(3, 'Eric Niyonzima', 'erric@alustudent.com', 3, '2024-09-02'),
+(4, 'Diane Mukamana', 'dian@alustudent.com', 2, '2024-09-02'),
+(5, 'Jean Baptiste', 'jeann@alustudent.com', 1, '2024-09-03');
 
 UPDATE Students
 SET email = 'gatete.new@alustudent.com'
 WHERE student_id = 6;
 
 INSERT INTO Students (student_id, name, email, classroom_id, enrollment_date)
-VALUES (999, 'Temp Student', 'temp@alustudent.com', 200, '2024-09-04');
+VALUES (999, 'Temp Student', 'temp@alustudent.com', 1, '2024-09-04');
 
 DELETE FROM Students
 WHERE student_id = 999;
@@ -60,7 +60,7 @@ SELECT * FROM Students
 WHERE classroom_id = 1;
 --member 3
 CREATE TABLE Faculty(
-    Faculty_id INT,
+    Faculty_id INT PRIMARY KEY,
     Name VARCHAR(100),
     Email VARCHAR(100),
     Department VARCHAR(50)
@@ -100,9 +100,9 @@ CREATE TABLE Courses (
 INSERT INTO Courses (course_id, course_name, credits, faculty_id, classroom_id) VALUES
 (1, 'Introduction to Databases', 3, 1, 1),
 (2, 'Data Structures',           4, 2, 4),
-(3, 'Web Development',           3, 3, 5),
-(4, 'Software Engineering',      4, 4, 6),
-(5, 'Computer Networks',         3, 1, 101);
+(3, 'Web Development',           3, 3, 3),
+(4, 'Software Engineering',      4, 4, 2),
+(5, 'Computer Networks',         3, 1, 1);
  
 
 UPDATE Courses
