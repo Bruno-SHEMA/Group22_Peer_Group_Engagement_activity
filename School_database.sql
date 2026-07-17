@@ -126,3 +126,12 @@ CREATE TABLE Extra_Curricular_Activities(
     faculty_advisor_id INT,
     FOREIGN KEY (faculty_advisor_id) REFERENCES Faculty(Faculty_id)
 );
+
+INSERT INTO Extra_Curricular_Activities (activity_id, activity_name, category, faculty_advisor_id) VALUES
+(1, 'Football Club', 'Sports', 4),
+(2, 'Debate Club', 'Academic', 3),
+(3, 'Coding Club', 'Technology', 1),
+(4, 'Drama Club', 'Arts', 4),
+(5, 'Math Society', 'Academic', 2);
+Insert INTO `Extra_Curricular_Activities`(activity_id, activity_name, category, faculty_advisor_id) VALUES
+(6, 'Basket club', 'Sports', 4);
