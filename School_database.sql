@@ -34,6 +34,7 @@ CREATE TABLE Students (
     classroom_id INT,
     enrollment_date DATE,
     FOREIGN KEY (classroom_id) REFERENCES Classroom(classroom_id)
+);
 
 INSERT INTO Students (student_id, name, email, classroom_id, enrollment_date)
 VALUES
