@@ -203,3 +203,11 @@ FROM Courses
 JOIN Student_Courses
     ON Courses.course_id = Student_Courses.course_id
 GROUP BY Courses.course_name;
+
+/*
+Normalization Check:
+
+The database is normalized because each table stores a single type of information.
+The junction tables Student_Courses and Student_Activities correctly handle many-to-many
+relationships without duplicating data. This reduces redundancy and maintains data consistency.
+*/
