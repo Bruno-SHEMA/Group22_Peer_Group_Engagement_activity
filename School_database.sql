@@ -144,4 +144,11 @@ DELETE from `Extra_Curricular_Activities` where activity_id=6;
 -- join clause
 SELECT `Extra_Curricular_Activities`.activity_id,`Extra_Curricular_Activities`.activity_name, `Extra_Curricular_Activities`.category, `Faculty`.`Name` from `Extra_Curricular_Activities` join `Faculty` where `Extra_Curricular_Activities`.faculty_advisor_id=`Faculty`.`Faculty_id`
 
-
+-- member5 student_Courses
+CREATE Table Student_Courses(
+    student_course_id INT primary key AUTO_INCREMENT,
+    student_id INT,
+    course_id INT,
+    Foreign Key (student_id) REFERENCES Students(student_id),
+    Foreign Key (course_id) REFERENCES Courses(course_id)
+);
