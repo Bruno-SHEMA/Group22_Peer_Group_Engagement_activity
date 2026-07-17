@@ -152,3 +152,10 @@ CREATE Table Student_Courses(
     Foreign Key (student_id) REFERENCES Students(student_id),
     Foreign Key (course_id) REFERENCES Courses(course_id)
 );
+-- insert
+INSERT INTO Student_Courses (student_id, course_id) VALUES
+(1, 1),
+(1, 2),
+(2, 3),
+(3, 4),
+(5, 5);
