@@ -164,4 +164,5 @@ select * from `Student_Courses`;
 
 -- update
 UPDATE `Student_Courses` SET course_id=3 where student_id=5;
-
+--delete everything in Student_course
+delete from `Student_Courses`;
