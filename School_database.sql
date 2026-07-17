@@ -187,3 +187,11 @@ select * from `Student_Activities`;
 --delete
 delete from `Student_Courses`;
 --join queries
+select * from `Student_Activities` where student_id=1;
+--joining students table to classroom
+SELECT `Students`.student_id, `Students`.`NAME`, `Students`.email, `Students`.`ENROLLMENT_DATE`, `Classroom`.room_number, `Classroom`.building, Courses.course_name from `Students` join `Classroom` ON `Students`.classroom_id=`Classroom`.classroom_id join Courses ON Courses.classroom_id= `Classroom`.classroom_id;
+--Student is enrolled in Course, taught by Faculty(name), in Classroom.
+SELECT `Students`.student_id, `Students`.`NAME`, `Students`.email, `Students`.`ENROLLMENT_DATE`, `Classroom`.room_number, `Classroom`.building from `Students` join `Classroom` where `Students`.classroom_id=`Classroom`.classroom_id;
+SELECT `Students`.NAME, `Courses`.course_name, `Faculty`.`Name`, `Classroom`.room_number from `Students` join `Classroom` on `Students`.classroom_id=`Classroom`.classroom_id JOIN `Courses` ON `Courses`.classroom_id=`Classroom`.classroom_id JOIN `Faculty` on `Courses`.faculty_id=`Faculty`.`Faculty_id`;
+
+SELECT `Students`.name, `Extra_Curricular_Activities`.activity_name,`Faculty`.`Name` from `Students` join `Student_Activities` on `Students`.student_id=`Student_Activities`.student_id join `Extra_Curricular_Activities` on `Student_Activities`.activity_id=`Extra_Curricular_Activities`.activity_id join `Faculty` on `Extra_Curricular_Activities`.faculty_advisor_id=Faculty.Faculty_id;
