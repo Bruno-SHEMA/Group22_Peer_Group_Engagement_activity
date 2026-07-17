@@ -18,3 +18,6 @@ INSERT INTO classroom (classroom_id, room_number,building,capacity)VALUES
 UPDATE Classroom
 SET capacity = 32
 WHERE classroom_id = 1;
+
+DELETE FROM classroom
+WHERE classroom_id = 5;
