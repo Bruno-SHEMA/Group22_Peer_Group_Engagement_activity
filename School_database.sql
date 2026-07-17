@@ -54,6 +54,44 @@ VALUES (999, 'Temp Student', 'temp@alustudent.com', 200, '2024-09-04');
 DELETE FROM Students
 WHERE student_id = 999;
 
+
+CREATE TABLE Courses (
+    course_id     INT PRIMARY KEY,
+    course_name   VARCHAR(100) NOT NULL,
+    credits       INT,
+    faculty_id    INT,
+    classroom_id  INT,
+    FOREIGN KEY (faculty_id) REFERENCES Faculty(faculty_id),
+    FOREIGN KEY (classroom_id) REFERENCES Classroom(classroom_id)
+);
+ 
+ SELECT Faculty_id FROM Faculty;
+
+INSERT INTO Courses (course_id, course_name, credits, faculty_id, classroom_id) VALUES
+(1, 'Introduction to Databases', 3, 1, 1),
+(2, 'Data Structures',           4, 2, 4),
+(3, 'Web Development',           3, 3, 5),
+(4, 'Software Engineering',      4, 4, 6),
+(5, 'Computer Networks',         3, 1, 101);
+ 
+
+UPDATE Courses
+SET credits = 4
+WHERE course_id = 1;
+ 
+
+DELETE FROM Courses
+WHERE course_id = 5;
+ 
+
+SELECT *
+FROM Courses
+WHERE credits >= 4;
+ 
+    
+
+    
+
 SELECT * FROM Students
 WHERE classroom_id = 1;
 CREATE TABLE Faculty(
