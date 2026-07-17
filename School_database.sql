@@ -15,3 +15,6 @@ INSERT INTO classroom (classroom_id, room_number, building, capacity) VALUES
 
 INSERT INTO classroom (classroom_id, room_number,building,capacity)VALUES
 (5, 'D301', 'Engineering Hall', 35);
+UPDATE Classroom
+SET capacity = 32
+WHERE classroom_id = 1;
