@@ -12,3 +12,6 @@ INSERT INTO classroom (classroom_id, room_number, building, capacity) VALUES
 (2, 'B203', 'Science Wing', 25),
 (3, 'C110', 'Arts Building', 40),
 (4, 'A205', 'Main Building', 20);
+
+INSERT INTO classroom (classroom_id, room_number,building,capacity)VALUES
+(5, 'D301', 'Engineering Hall', 35);
