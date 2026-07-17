@@ -118,3 +118,11 @@ FROM Courses
 WHERE credits >= 4;
  
     
+-- member 5/ Extra caricula activities
+CREATE TABLE Extra_Curricular_Activities(
+    activity_id INT PRIMARY KEY,
+    activity_name VARCHAR(100),
+    category VARCHAR(255),
+    faculty_advisor_id INT,
+    FOREIGN KEY (faculty_advisor_id) REFERENCES Faculty(Faculty_id)
+);
