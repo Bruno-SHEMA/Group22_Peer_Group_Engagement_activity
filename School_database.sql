@@ -7,3 +7,8 @@ CREATE TABLE classroom (
     building VARCHAR(50),
     capacity INT
 );
+INSERT INTO classroom (classroom_id, room_number, building, capacity) VALUES
+(1, 'A101', 'Main Building', 30),
+(2, 'B203', 'Science Wing', 25),
+(3, 'C110', 'Arts Building', 40),
+(4, 'A205', 'Main Building', 20);
