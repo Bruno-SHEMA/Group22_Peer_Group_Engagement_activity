@@ -195,3 +195,11 @@ SELECT `Students`.student_id, `Students`.`NAME`, `Students`.email, `Students`.`E
 SELECT `Students`.NAME, `Courses`.course_name, `Faculty`.`Name`, `Classroom`.room_number from `Students` join `Classroom` on `Students`.classroom_id=`Classroom`.classroom_id JOIN `Courses` ON `Courses`.classroom_id=`Classroom`.classroom_id JOIN `Faculty` on `Courses`.faculty_id=`Faculty`.`Faculty_id`;
 
 SELECT `Students`.name, `Extra_Curricular_Activities`.activity_name,`Faculty`.`Name` from `Students` join `Student_Activities` on `Students`.student_id=`Student_Activities`.student_id join `Extra_Curricular_Activities` on `Student_Activities`.activity_id=`Extra_Curricular_Activities`.activity_id join `Faculty` on `Extra_Curricular_Activities`.faculty_advisor_id=Faculty.Faculty_id;
+-- Aggregate query
+SELECT 
+    Courses.course_name,
+    COUNT(Student_Courses.student_id) AS number_of_students
+FROM Courses
+JOIN Student_Courses
+    ON Courses.course_id = Student_Courses.course_id
+GROUP BY Courses.course_name;
