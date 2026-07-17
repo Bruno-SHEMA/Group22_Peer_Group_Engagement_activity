@@ -137,3 +137,7 @@ Insert INTO `Extra_Curricular_Activities`(activity_id, activity_name, category, 
 (6, 'Basket club', 'Sports', 4);
 -- selecting
 select * from `Extra_Curricular_Activities`;
+--update 
+UPDATE `Extra_Curricular_Activities` set activity_name='Hackathon' where activity_id=3;
+--delete
+DELETE from `Extra_Curricular_Activities` where activity_id=6;
