@@ -182,3 +182,6 @@ INSERT INTO Student_Activities (student_id, activity_id) VALUES
 (3, 1),
 (4, 4),
 (5, 5);
+--select
+select * from `Student_Activities`;
+
