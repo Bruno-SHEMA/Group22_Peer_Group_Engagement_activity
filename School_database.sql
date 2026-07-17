@@ -184,4 +184,6 @@ INSERT INTO Student_Activities (student_id, activity_id) VALUES
 (5, 5);
 --select
 select * from `Student_Activities`;
-
+--delete
+delete from `Student_Courses`;
+--join queries
