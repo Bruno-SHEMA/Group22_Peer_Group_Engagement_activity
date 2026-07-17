@@ -21,3 +21,6 @@ WHERE classroom_id = 1;
 
 DELETE FROM classroom
 WHERE classroom_id = 5;
+
+SELECT * FROM classroom
+WHERE building = 'Main Building';
