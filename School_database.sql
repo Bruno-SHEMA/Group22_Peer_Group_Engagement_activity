@@ -34,3 +34,24 @@ CREATE TABLE Students (
     classroom_id INT,
     enrollment_date DATE,
     FOREIGN KEY (classroom_id) REFERENCES Classroom(classroom_id)
+
+INSERT INTO Students (student_id, name, email, classroom_id, enrollment_date)
+VALUES
+(6, 'Gatete Keza', 'gatet@alustudent.com', 1, '2024-09-01'),
+(7, 'Aline Uwase', 'alin@alustudent.com', 4, '2024-09-01'),
+(9, 'Eric Niyonzima', 'erric@alustudent.com', 5, '2024-09-02'),
+(12, 'Diane Mukamana', 'dian@alustudent.com', 6, '2024-09-02'),
+(8, 'Jean Baptiste', 'jeann@alustudent.com', 101, '2024-09-03');
+
+UPDATE Students
+SET email = 'gatete.new@alustudent.com'
+WHERE student_id = 6;
+
+INSERT INTO Students (student_id, name, email, classroom_id, enrollment_date)
+VALUES (999, 'Temp Student', 'temp@alustudent.com', 200, '2024-09-04');
+
+DELETE FROM Students
+WHERE student_id = 999;
+
+SELECT * FROM Students
+WHERE classroom_id = 1;
