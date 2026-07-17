@@ -141,3 +141,7 @@ select * from `Extra_Curricular_Activities`;
 UPDATE `Extra_Curricular_Activities` set activity_name='Hackathon' where activity_id=3;
 --delete
 DELETE from `Extra_Curricular_Activities` where activity_id=6;
+-- join clause
+SELECT `Extra_Curricular_Activities`.activity_id,`Extra_Curricular_Activities`.activity_name, `Extra_Curricular_Activities`.category, `Faculty`.`Name` from `Extra_Curricular_Activities` join `Faculty` where `Extra_Curricular_Activities`.faculty_advisor_id=`Faculty`.`Faculty_id`
+
+
