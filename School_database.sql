@@ -162,3 +162,6 @@ INSERT INTO Student_Courses (student_id, course_id) VALUES
 --Select
 select * from `Student_Courses`;
 
+-- update
+UPDATE `Student_Courses` SET course_id=3 where student_id=5;
+
