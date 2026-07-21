@@ -24,7 +24,7 @@ DELETE FROM Classroom
 WHERE classroom_id = 5;
 
 SELECT * FROM Classroom
-WHERE building="Main Building';
+WHERE building="Main Building";
 --member 1
 
 CREATE TABLE Students (
